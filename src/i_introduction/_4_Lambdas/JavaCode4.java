@@ -5,14 +5,10 @@ import com.google.common.collect.Iterables;
 import util.JavaCode;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 public class JavaCode4 extends JavaCode {
     public boolean task4(Collection<Integer> collection) {
-        return Iterables.any(collection, new Predicate<Integer>() {
-            @Override
-            public boolean apply(Integer element) {
-                return element % 42 == 0;
-            }
-        });
+        return collection.stream().anyMatch(i -> i % 42 ==0 );
     }
 }

@@ -8,13 +8,16 @@ import java.util.regex.Pattern
 class _05_String_Templates() {
     @Test fun match() {
         assertTrue("11 MAR 1952".matches(task5().toRegex()))
+        assertTrue("11 MAR 1952".matches(task5().toRegex()))
     }
 
     @Test fun match1() {
         assertTrue("24 AUG 1957".matches(task5().toRegex()))
+        assertTrue("24 AUG 1957".matches(task5().toRegex()))
     }
 
     @Test fun doNotMatch() {
+        assertFalse("24 RRR 1957".matches(task5().toRegex()))
         assertFalse("24 RRR 1957".matches(task5().toRegex()))
     }
 }
