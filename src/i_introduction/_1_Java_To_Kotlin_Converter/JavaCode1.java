@@ -6,16 +6,12 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public class JavaCode1 extends JavaCode {
-    public String task1(Collection<Integer> collection) {
+    public String task1(Collection<Integer> integers) {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        Iterator<Integer> iterator = collection.iterator();
-        while (iterator.hasNext()) {
-            Integer element = iterator.next();
-            sb.append(element);
-            if (iterator.hasNext()) {
-                sb.append(", ");
-            }
+        for (Integer integer : integers ) {
+            sb.append(integer);
+            sb.append(", ");
         }
         sb.append("}");
         return sb.toString();
