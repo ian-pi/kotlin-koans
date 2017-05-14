@@ -5,9 +5,9 @@ package i_introduction._5_String_Templates;
  */
 public class JavaStringTemplates {
 
-    private static final String MONTH_REGEX = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)";
+    private static final String month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)";
 
     public static String javaTask5() {
-        return String.format("\\d{2} %s \\d{4}", MONTH_REGEX);
+        return String.format("\\d{2} %s \\d{4}", month);
     }
 }
