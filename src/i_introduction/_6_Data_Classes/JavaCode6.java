@@ -41,11 +41,11 @@ public class JavaCode6 extends JavaCode {
         i_introduction._6_Data_Classes.Person alice = new i_introduction._6_Data_Classes.Person("Alice", 29);
 
 
-        i_introduction._6_Data_Classes.Person bob = new i_introduction._6_Data_Classes.Person();
+        i_introduction._6_Data_Classes.Person bob = new i_introduction._6_Data_Classes.Person("Bob", 30);
 
         // kotlin (data) classes come with getters and setters
         bob.getAge();
-        bob.setAge(32);
+        bob.setAge(31);
         // no setter available because name is immutable!
         bob.getName();
         return Lists.newArrayList(alice, bob);
