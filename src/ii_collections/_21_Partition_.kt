@@ -12,13 +12,12 @@ fun example8() {
 
 fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> {
     // Return customers who have more undelivered orders than delivered
-    return this.customers.filter {it.mostlyUndelivered()}.toSet()
+    return this.customers.filter {
+        val (delivered, undelivered) = it.orders.partition { it.isDelivered }
+        undelivered.size > delivered.size;
+    }.toSet()
     }
 
-fun Customer.mostlyUndelivered() : Boolean {
-    val (delivered, undelivered) = this.orders.partition { it.isDelivered }
-    return undelivered.size > delivered.size;
-}
 
 
 
