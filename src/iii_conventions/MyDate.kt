@@ -10,8 +10,6 @@ operator fun MyDate.compareTo(that: MyDate): Int {
     return this.dayOfMonth.compareTo(that.dayOfMonth)
 }
 
-
-
 enum class TimeInterval {
     DAY,
     WEEK,
@@ -44,11 +42,6 @@ class DateRange(val start: MyDate, val endInclusive: MyDate) : Iterable<MyDate> 
 }
 
 
-fun printStuff() {
-    for (i in 1..5) {
-        print(i)
-    }
-}
 
 
 
