@@ -13,12 +13,13 @@ fun todoTask1(collection: Collection<Int>): Nothing = TODO(
 
 fun task1(integers: Collection<Int>): String {
     val sb = StringBuilder()
+    val iterator = integers.iterator();
     sb.append("{")
-    for (integer in integers) {
-        sb.append(integer)
-        sb.append(", ")
+    while (iterator.hasNext()) {
+        sb.append(iterator.next())
+        sb.append(if (iterator.hasNext()) ", " else "")
     }
-    sb.append("}").toString()
+    sb.append("}")
     return sb.toString()
 }
 

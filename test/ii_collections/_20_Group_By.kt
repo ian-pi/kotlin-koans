@@ -8,5 +8,6 @@ import org.junit.Test
 class _20_Group_By {
     @Test fun testGroupCustomersByCity() {
         assertEquals(groupedByCities, shop.groupCustomersByCity())
+        assertEquals(groupedByCities, _20_GroupByJava.groupCustomersByCity(shop))
     }
 }
