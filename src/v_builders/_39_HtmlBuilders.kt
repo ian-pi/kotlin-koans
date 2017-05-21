@@ -23,27 +23,25 @@ fun todoTask39(): Nothing = TODO(
 fun renderProductTable(): String {
     return html {
         table {
-            tr(getTitleColor(), {
+            tr(color = getTitleColor()) {
 
-                td(getCellColor(0, 0), "left", {
+                td(color = getCellColor(0, 0)) {
                     text("Product")
-                })
-                td(getCellColor(0, 1), "left", {
+                }
+                td(color = getCellColor(0, 0)){
                     getTitleColor()
                     text("Price")
-                })
-                td(getCellColor(0, 2), "left", {
+                }
+                td(color = getCellColor(0, 0)) {
                     getTitleColor()
                     text("Popularity")
-                })
-
-
-            })
+                }
+            }
             for ( (index, value) in getProducts().withIndex()) {
                 tr {
-                    td(getCellColor(index+1, 0), "left", { text(value.description) })
-                    td(getCellColor(index+1, 1), "left", { text(value.price) })
-                    td(getCellColor(index+1, 2), "left", { text(value.popularity) })
+                    td(color = getCellColor(index+1, 0)) { text(value.description) }
+                    td(color = getCellColor(index+1, 1)) { text(value.price) }
+                    td(color = getCellColor(index+1, 2)) { text(value.popularity) }
                 }
             }
         }
